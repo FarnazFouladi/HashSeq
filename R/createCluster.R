@@ -1,3 +1,15 @@
+#' Create clusters
+#'
+#'Creates clusters of parents and one-mismatch children.
+#'
+#' @param inputDir String
+#' @param outputDir String
+#' @param finaloutput Boolean
+#'
+#' @return writes a text file named as OneMimatchCluster.txt
+#' @export
+#'
+#' @examples
 createCluster <- function(inputDir,outputDir,finaloutput=FALSE)
 {
   # Install required packages not installed
