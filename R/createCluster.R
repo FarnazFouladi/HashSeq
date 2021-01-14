@@ -20,7 +20,7 @@ createCluster <- function(inputDir,outputDir,finaloutput=FALSE)
                        '-finaloutput',finaloutput)
 
   inputArray <- rJava::.jarray(strsplit(inputParams, ' ')[[1]])
-  jarDir <- '.'
+  jarDir <- system.file('inst',package = 'HashSeq')
   jarName <- 'SequenceVariant.jar'
 
   # Add JAR file to class path
