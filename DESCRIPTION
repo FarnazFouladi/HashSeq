@@ -1,13 +1,13 @@
 Package: HashSeq
-Title: What the Package Does (One Line, Title Case)
+Title: Infers True Sequences
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Farnaz",
+           family = "Fouladi",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "farnaz.fouladi@gmail.com")
+Description: This package used normal distribution based inference test to detect 
+    true sequences from sequence errors.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
