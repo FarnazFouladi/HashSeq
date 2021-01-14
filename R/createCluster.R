@@ -27,7 +27,7 @@ createCluster <- function(inputDir,outputDir,finaloutput=FALSE)
   rJava::.jaddClassPath(file.path(jarDir, jarName))
 
   # Display class path
-  print(paste0('Class Path: ', .jclassPath()))
+  print(paste0('Class Path: ', rJava::.jclassPath()))
 
   # Invoke static sequenceVariant.RunPipelineRefactor.main method
   rJava::.jcall("sequenceVariant/RunPipelineRefactor", returnSig = "V", "main", inputArray)
