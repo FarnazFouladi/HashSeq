@@ -1,4 +1,4 @@
-createCluster <- function(inputDir,outputDir,finaloutput)
+createCluster <- function(inputDir,outputDir,finaloutput=FALSE)
 {
   # Install required packages not installed
   packages <- c("rJava")
