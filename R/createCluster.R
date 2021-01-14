@@ -12,15 +12,6 @@
 #' @examples
 createCluster <- function(inputDir,outputDir,finaloutput=FALSE)
 {
-  # Install required packages not installed
-  packages <- c("rJava")
-  installed_packages <- packages %in% rownames(installed.packages())
-  if (any(installed_packages == FALSE))
-  {
-    install.packages(packages[!installed_packages])
-  }
-  invisible(lapply(packages, library, character.only = TRUE))
-
   # initialize Java Virtual Machine (JVM)
   rJava::.jinit()
 
