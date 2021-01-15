@@ -2,18 +2,16 @@
 % Please edit documentation in R/makeLoessPlot.R
 \name{makeLoessPlot}
 \alias{makeLoessPlot}
-\title{Relationship between parent abundance and mean and standard deviation}
+\title{Plot showing the relationship between parent abundance and mean and standard deviation}
 \usage{
-makeLoessPlot(clusterProperties, param)
+makeLoessPlot(clusterProperties)
 }
 \arguments{
 \item{clusterProperties}{a table of clusters}
-
-\item{param}{"mean" or "sd"}
 }
 \value{
 Figures
 }
 \description{
-Relationship between parent abundance and mean and standard deviation
+Plot showing the relationship between parent abundance and mean and standard deviation
 }
