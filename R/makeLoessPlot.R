@@ -6,7 +6,6 @@
 #' @export
 #' @import graphics
 #'
-#'
 makeLoessPlot<-function(clusterProperties){
   par(mfrow=c(1,2))
   makeScatterPlot(clusterProperties,"mean")
