@@ -4,14 +4,14 @@
 \alias{processCluster}
 \title{Create clusters}
 \usage{
-processCluster(inputDir, outputDir, finaloutput = FALSE)
+processCluster(inputDir, outputDir, countTable = FALSE)
 }
 \arguments{
 \item{inputDir}{String}
 
 \item{outputDir}{String}
 
-\item{finaloutput}{Boolean}
+\item{countTable}{Boolean}
 }
 \value{
 writes a text file named as OneMimatchCluster.txt

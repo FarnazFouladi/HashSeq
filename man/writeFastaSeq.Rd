@@ -4,14 +4,12 @@
 \alias{writeFastaSeq}
 \title{Fasta file including inferred sequences and parents}
 \usage{
-writeFastaSeq(inferredseq, parents, outputDir)
+writeFastaSeq(inferredseq, parents)
 }
 \arguments{
 \item{inferredseq}{Significant children}
 
 \item{parents}{parents with abundance above the threshold}
-
-\item{outputDir}{output directory}
 }
 \value{
 writes a fasta file

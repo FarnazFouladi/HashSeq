@@ -4,10 +4,7 @@
 \alias{loadCluster}
 \title{Loading the cluster table "OneMismatchCluster.txt"}
 \usage{
-loadCluster(outputDir)
-}
-\arguments{
-\item{outputDir}{Output Directory where OneMismatchCluster.txt is placed}
+loadCluster()
 }
 \description{
 Loading the cluster table "OneMismatchCluster.txt"

@@ -4,20 +4,20 @@
 #'
 #' @param inputDir String
 #' @param outputDir String
-#' @param finaloutput Boolean
+#' @param countTable Boolean
 #'
 #' @return writes a text file named as OneMimatchCluster.txt
 #' @export
 #'
 #'
-processCluster <- function(inputDir,outputDir,finaloutput=FALSE)
+processCluster <- function(inputDir,outputDir,countTable=FALSE)
 {
   # initialize Java Virtual Machine (JVM)
   rJava::.jinit()
 
   inputParams <- paste('-inputdirectory',inputDir,
                        '-outputdirectory',outputDir,
-                       '-finaloutput',finaloutput)
+                       '-finaloutput',countTable)
 
   inputArray <- rJava::.jarray(strsplit(inputParams, ' ')[[1]])
   jarDir <- system.file('extdata',package = 'HashSeq')
@@ -31,6 +31,8 @@ processCluster <- function(inputDir,outputDir,finaloutput=FALSE)
 
   # Invoke static sequenceVariant.RunPipelineRefactor.main method
   rJava::.jcall("sequenceVariant/RunPipelineRefactor", returnSig = "V", "main", inputArray)
+
+  setwd(outputDir)
 }
 
 
