@@ -9,7 +9,7 @@
 #' @return writes a text file named as OneMimatchCluster.txt
 #' @export
 #'
-#' @examples
+#'
 processCluster <- function(inputDir,outputDir,finaloutput=FALSE)
 {
   # initialize Java Virtual Machine (JVM)

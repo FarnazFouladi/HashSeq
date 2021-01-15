@@ -2,11 +2,12 @@
 #'
 #' @param outputDir Output Directory where OneMismatchCluster.txt is placed
 #'
-#' @return
+#'
 #' @export
 #' @import dplyr
+#' @importFrom utils read.table
 #'
-#' @examples
+#'
 loadCluster<-function(outputDir){
 
   parentPrefix <- "parent"
@@ -17,6 +18,6 @@ loadCluster<-function(outputDir){
   df <- read.table(file.path(outputDir,"OneMismatchCluster.txt") ,sep="\t", header=TRUE, stringsAsFactors=F)
   offset <- max(nchar(df$Parent)) - numOfPrefixCharacters
   df$Parent = sapply(df$Parent, addLeadingZeros, numOfPrefixCharacters)
-  df<-df %>% mutate(Parent.child=paste0(Parent, "_", Child))
+  df<-df %>% mutate(Parent.child=paste0(.data$Parent, "_", .data$Child))
   return(df)
 }

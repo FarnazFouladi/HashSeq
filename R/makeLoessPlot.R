@@ -1,12 +1,13 @@
 #' Relationship between parent abundance and mean and standard deviation
 #'
-#' @param clusterProperties
+#' @param clusterProperties a table of clusters
 #' @param param "mean" or "sd"
 #'
-#' @return
+#' @return Figures
 #' @export
+#' @import graphics
 #'
-#' @examples
+#'
 makeLoessPlot<-function(clusterProperties,param){
   par(mfrow=c(1,2))
   makeScatterPlot(clusterProperties,"mean")

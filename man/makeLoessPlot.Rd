@@ -7,10 +7,12 @@
 makeLoessPlot(clusterProperties, param)
 }
 \arguments{
+\item{clusterProperties}{a table of clusters}
+
 \item{param}{"mean" or "sd"}
 }
 \value{
-
+Figures
 }
 \description{
 Relationship between parent abundance and mean and standard deviation

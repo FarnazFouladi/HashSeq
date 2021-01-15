@@ -7,10 +7,14 @@
 writeFastaSeq(inferredseq, parents, outputDir)
 }
 \arguments{
-\item{outputDir}{}
+\item{inferredseq}{Significant children}
+
+\item{parents}{parents with abundance above the threshold}
+
+\item{outputDir}{output directory}
 }
 \value{
-
+writes a fasta file
 }
 \description{
 Fasta file including inferred sequences and parents

@@ -9,9 +9,6 @@ loadCluster(outputDir)
 \arguments{
 \item{outputDir}{Output Directory where OneMismatchCluster.txt is placed}
 }
-\value{
-
-}
 \description{
 Loading the cluster table "OneMismatchCluster.txt"
 }

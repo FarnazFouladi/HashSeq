@@ -7,10 +7,9 @@
 getMeanAndSD(clusters, outputDir)
 }
 \arguments{
-\item{outputDir}{}
-}
-\value{
+\item{clusters}{A table of clusters with parents and children}
 
+\item{outputDir}{output directory()}
 }
 \description{
 Mean and standard deviation for each cluster are calculated and then means and

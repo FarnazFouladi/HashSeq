@@ -7,12 +7,12 @@
 getAbundantParents(cluster, abundanceThreshold = 1000)
 }
 \arguments{
-\item{cluster}{table loaded by loadCluster method}
+\item{cluster}{the table loaded by loadCluster method}
 
-\item{abundanceThreshold}{threshold for filtering sequences defualt=1000}
+\item{abundanceThreshold}{threshold for filtering sequences (defualt=1000)}
 }
 \value{
-
+a table with parents having abundance above threshold
 }
 \description{
 Selects only parents that have an abundance above a threshold

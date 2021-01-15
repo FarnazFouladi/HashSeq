@@ -7,10 +7,16 @@
 infer(clusterProperties, cluster, abundanceThreshold, outputDir)
 }
 \arguments{
-\item{outputDir}{}
+\item{clusterProperties}{A table that includes the properties of the clusters}
+
+\item{cluster}{a cluster table}
+
+\item{abundanceThreshold}{threshold for removing low abundant sequences}
+
+\item{outputDir}{output directory}
 }
 \value{
-
+a table with significant children
 }
 \description{
 Inference test
