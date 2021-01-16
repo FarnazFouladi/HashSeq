@@ -18,4 +18,5 @@ Imports:
     dplyr,
     seqinr,
     scattermore,
-    Hmisc
+    Hmisc,
+    fansi
