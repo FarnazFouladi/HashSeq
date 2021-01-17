@@ -7,7 +7,8 @@
 #' @import dplyr
 #' @noRd
 #'
-writeFastaSeq<-function(inferredseq,parents){
+writeFastaSeq<-function(inferredseq,parents)
+{
   set1 <- inferredseq %>% ungroup() %>% select(.data$parentName)
   set2 <- parents %>% select(.data$parentName)
   parentNameSet <- union(set1, set2)

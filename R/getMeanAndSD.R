@@ -10,7 +10,6 @@
 #' @noRd
 #'
 getMeanAndSD<-function(clusters){
-
    # parents with more than one child
   df1 <-  clusters %>% filter(!is.na(.data$ChildAbundance), .data$NumberOfChildren > 1)
 
@@ -36,9 +35,3 @@ getMeanAndSD<-function(clusters){
   write.table(df3,file.path(paste0("childrenProperties.txt")),sep="\t",quote = FALSE)
   return(df3)
 }
-
-
-
-
-
-

@@ -31,5 +31,6 @@ infer<-function(clusterProperties,cluster,abundanceThreshold){
   view_inference_test_sig_children <-view_inference_test %>% filter(.data$pvalAdjusted < 0.050, .data$parentAbundance > abundanceThreshold)
 
   write.table(view_inference_test_sig_children,file.path(paste0("InferenceTestSignificantChildren.txt")),sep="\t",quote = FALSE)
+
   return(view_inference_test_sig_children)
 }

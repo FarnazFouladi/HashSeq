@@ -33,6 +33,3 @@ processCluster <- function(inputDir,outputDir,countTable=FALSE)
 
   setwd(outputDir)
 }
-
-
-

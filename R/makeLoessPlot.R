@@ -21,4 +21,3 @@ makeScatterPlot<-function(clusterProperties,param){
 
   lines(log10(clusterProperties$parentAbundance),clusterProperties[,paste0("predicted",Hmisc::capitalize(param))],col="red",type = "l",lwd=2)
 }
-
