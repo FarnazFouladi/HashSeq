@@ -4,8 +4,8 @@
 #' @param parents parents with abundance above the threshold
 #'
 #' @return writes a fasta file
-#' @export
 #' @import dplyr
+#' @noRd
 #'
 writeFastaSeq<-function(inferredseq,parents){
   set1 <- inferredseq %>% ungroup() %>% select(.data$parentName)

@@ -5,7 +5,6 @@
 #' @return Figures
 #' @export
 #' @import graphics
-#' @import fansi
 #'
 makeLoessPlot<-function(clusterProperties){
   par(mfrow=c(1,2))

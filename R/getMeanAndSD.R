@@ -4,11 +4,10 @@
 #' standard deviations are fitted to a LOESS regression as a function of parent abundance.
 #'
 #' @param clusters A table of clusters with parents and children
-#' @export
 #' @import dplyr
 #' @importFrom utils write.table
 #' @importFrom stats sd median var loess predict
-#'
+#' @noRd
 #'
 getMeanAndSD<-function(clusters){
 

@@ -1,9 +1,8 @@
 #' Loading the cluster table "OneMismatchCluster.txt"
 #'
-#' @export
 #' @import dplyr
 #' @importFrom utils read.table
-#'
+#' @noRd
 #'
 loadCluster<-function(){
 

@@ -6,9 +6,10 @@
 #' @param abundanceThreshold  threshold for filtering sequences (defualt=1000)
 #'
 #' @return a table with parents having abundance above threshold
-#' @export
 #' @import dplyr
+#' @noRd
 #'
+
 getAbundantParents<-function(cluster,abundanceThreshold=1000){
 
   AbundantParents <- cluster %>% filter(.data$ParentAbundance > abundanceThreshold) %>%

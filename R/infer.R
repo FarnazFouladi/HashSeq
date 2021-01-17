@@ -5,11 +5,10 @@
 #' @param  abundanceThreshold threshold for removing low abundant sequences
 #'
 #' @return a table with significant children
-#' @export
 #' @import dplyr
 #' @importFrom stats pnorm p.adjust
 #' @importFrom utils write.table
-#'
+#' @noRd
 #'
 infer<-function(clusterProperties,cluster,abundanceThreshold){
 

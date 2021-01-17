@@ -7,8 +7,7 @@
 #' @param countTable Boolean
 #'
 #' @return writes a text file named as OneMimatchCluster.txt
-#' @export
-#'
+#' @noRd
 #'
 processCluster <- function(inputDir,outputDir,countTable=FALSE)
 {
