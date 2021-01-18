@@ -4,10 +4,12 @@
 \alias{makeLoessPlot}
 \title{Plot showing the relationship between parent abundance and mean and standard deviation}
 \usage{
-makeLoessPlot(clusterProperties)
+makeLoessPlot(outputDir, fileName = "childrenproperties.txt")
 }
 \arguments{
-\item{clusterProperties}{a table of clusters}
+\item{outputDir}{The directory where childrenproperties.txt has been saved}
+
+\item{fileName}{Default=childrenproperties.txt}
 }
 \value{
 Figures

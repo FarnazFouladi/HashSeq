@@ -1,16 +1,17 @@
 #' Plot showing the relationship between parent abundance and mean and standard deviation
 #'
-#' @param clusterProperties a table of clusters
+#' @param outputDir The directory where childrenproperties.txt has been saved
+#' @param fileName Default=childrenproperties.txt
 #'
 #' @return Figures
 #' @export
 #' @import graphics
 #'
-makeLoessPlot<-function(clusterProperties){
+makeLoessPlot<-function(outputDir, fileName="childrenproperties.txt"){
+  clusterProperties<-read.table(file.path(outputDir,"childrenProperties.txt"),sep="\t",header = TRUE)
   par(mfrow=c(1,2))
   makeScatterPlot(clusterProperties,"mean")
   makeScatterPlot(clusterProperties,"sd")
-
 }
 
 makeScatterPlot<-function(clusterProperties,param){
