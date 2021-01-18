@@ -16,6 +16,8 @@ inferTrueSequences(
 
 \item{outputDir}{String}
 
+\item{abundanceThreshold}{threshold to remove low abundance sequences}
+
 \item{countTable}{Boolean}
 }
 \value{

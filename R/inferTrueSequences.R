@@ -4,6 +4,7 @@
 #'
 #' @param inputDir String
 #' @param outputDir String
+#' @param abundanceThreshold threshold to remove low abundance sequences
 #' @param countTable Boolean
 #'
 #' @return TODO:  determine what result to return
