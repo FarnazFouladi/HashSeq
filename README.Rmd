@@ -22,13 +22,7 @@ The goal of HashSeq is to infer true biological 16 rRNA sequences from backgroun
 
 ## Installation
 
-You can install the released version of HashSeq from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("HashSeq")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+Install from github with:
 
 ``` r
 # install.packages("devtools")
@@ -36,9 +30,28 @@ devtools::install_github("FarnazFouladi/HashSeq")
 ```
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Specify the input directory including sequences, and output directory, and
+a filter threshold where it is used to remove low abundant sequence variants.
+
 
 ```{r example}
 library(HashSeq)
-## basic example code
+inputDir="inst/extdata/example/sequences"
+outputDir="inst/extdata/example/output"
+threshold=1000
 ```
+
+Run the inferTrueSequences to generate a count table
+
+```{r}
+inferTrueSequences(inputDir,outputDir,threshold)
+```
+
+Visualize the mean and standard deviation of one-mimatch variants
+
+```{r}
+makeLoessPlot(outputDir,clusterProps)
+
+```
+
+
