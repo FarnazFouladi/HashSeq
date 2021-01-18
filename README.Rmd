@@ -43,7 +43,7 @@ threshold=1000
 
 Run the inferTrueSequences to generate a count table
 
-```{r}
+```{r }
 inferTrueSequences(inputDir,outputDir,threshold)
 ```
 
