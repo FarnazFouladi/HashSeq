@@ -5,13 +5,12 @@
 #' @param inputDir String
 #' @param outputDir String
 #' @param abundanceThreshold threshold to remove low abundance sequences
-#' @param countTable Boolean
 #'
 #' @return TODO:  determine what result to return
 #' @export
 #'
 #'
-inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000, countTable=FALSE)
+inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
 {
   print("***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************")
   printDim <- function(df, name)
@@ -36,6 +35,8 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000, count
   printDim(significantChildren, "Significant Children Table")
 
   writeFastaSeq(significantChildren,dfAbundantParents)
+
+  processCluster(inputDir,outputDir,countTable = TRUE)
 
   print("******INFERENCE PROCESSING IS COMPLETE******")
   print("TODO:  Add text that informs the user about which methods can be invoked to visualize results.")

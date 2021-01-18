@@ -4,12 +4,7 @@
 \alias{inferTrueSequences}
 \title{Infer true amplicon sequence variants}
 \usage{
-inferTrueSequences(
-  inputDir,
-  outputDir,
-  abundanceThreshold = 1000,
-  countTable = FALSE
-)
+inferTrueSequences(inputDir, outputDir, abundanceThreshold = 1000)
 }
 \arguments{
 \item{inputDir}{String}
@@ -17,8 +12,6 @@ inferTrueSequences(
 \item{outputDir}{String}
 
 \item{abundanceThreshold}{threshold to remove low abundance sequences}
-
-\item{countTable}{Boolean}
 }
 \value{
 TODO:  determine what result to return
