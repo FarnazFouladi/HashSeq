@@ -31,5 +31,4 @@ processCluster <- function(inputDir,outputDir,countTable=FALSE)
   # Invoke static sequenceVariant.RunPipelineRefactor.main method
   rJava::.jcall("sequenceVariant/RunPipelineRefactor", returnSig = "V", "main", inputArray)
 
-  setwd(outputDir)
 }

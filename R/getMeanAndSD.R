@@ -4,12 +4,13 @@
 #' standard deviations are fitted to a LOESS regression as a function of parent abundance.
 #'
 #' @param clusters A table of clusters with parents and children
+#' @param outputDir output directory
 #' @import dplyr
 #' @importFrom utils write.table
 #' @importFrom stats sd median var loess predict
 #' @noRd
 #'
-getMeanAndSD<-function(clusters){
+getMeanAndSD<-function(clusters,outputDir){
    # parents with more than one child
   df1 <-  clusters %>% filter(!is.na(.data$ChildAbundance), .data$NumberOfChildren > 1)
 
@@ -32,6 +33,6 @@ getMeanAndSD<-function(clusters){
     predictedSd = predict(fitSD,log10(.data$parentAbundance)),
     mean.inference = ifelse(.data$predictedMean > .data$mean, .data$predictedMean, .data$mean),
     sd.inference = ifelse(.data$predictedSd > .data$sd, .data$predictedSd, .data$sd) )
-  write.table(df3,file.path(paste0("childrenProperties.txt")),sep="\t",quote = FALSE)
+  write.table(df3,file.path(outputDir,paste0("childrenProperties.txt")),sep="\t",quote = FALSE)
   return(df3)
 }

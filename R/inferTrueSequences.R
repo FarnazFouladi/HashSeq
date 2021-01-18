@@ -22,19 +22,19 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
   }
   processCluster(inputDir,outputDir)
 
-  cluster <- loadCluster()
+  cluster <- loadCluster(outputDir)
   printDim(cluster, "Cluster Table")
 
   dfAbundantParents <- getAbundantParents(cluster,abundanceThreshold)
   printDim(dfAbundantParents, "Abundance Parents Table")
 
-  childrenProperties <- getMeanAndSD(cluster)
+  childrenProperties <- getMeanAndSD(cluster,outputDir)
   printDim(childrenProperties, "Children Properties Table")
 
-  significantChildren <- infer(childrenProperties,cluster,abundanceThreshold)
+  significantChildren <- infer(childrenProperties,cluster,abundanceThreshold,outputDir)
   printDim(significantChildren, "Significant Children Table")
 
-  writeFastaSeq(significantChildren,dfAbundantParents)
+  writeFastaSeq(significantChildren,dfAbundantParents,outputDir)
 
   processCluster(inputDir,outputDir,countTable = TRUE)
 
