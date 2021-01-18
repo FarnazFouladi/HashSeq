@@ -34,9 +34,29 @@ threshold=1000
 
 Run the inferTrueSequences to generate a count table
 
-``` r
-inferTrueSequences(inputDir,outputDir,threshold)
-```
+    #> [1] "***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************"
+    #> [1] "Class Path: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rJava/java"                                                       
+    #> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpJ1r2fC/temp_libpatha9b873d63b5b/HashSeq/extdata/SequenceVariant.jar"
+    #> [1] "*****Dimensions of Cluster Table*****"
+    #> [1] "number of rows: 5643"
+    #> [1] "number of columns: 10"
+    #> 
+    #> [1] "*****Dimensions of Abundance Parents Table*****"
+    #> [1] "number of rows: 9"
+    #> [1] "number of columns: 2"
+    #> 
+    #> [1] "*****Dimensions of Children Properties Table*****"
+    #> [1] "number of rows: 230"
+    #> [1] "number of columns: 10"
+    #> 
+    #> [1] "*****Dimensions of Significant Children Table*****"
+    #> [1] "number of rows: 26"
+    #> [1] "number of columns: 12"
+    #> 
+    #> [1] "Class Path: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rJava/java"                                                       
+    #> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpJ1r2fC/temp_libpatha9b873d63b5b/HashSeq/extdata/SequenceVariant.jar"
+    #> [1] "******INFERENCE PROCESSING IS COMPLETE******"
+    #> [1] "TODO:  Add text that informs the user about which methods can be invoked to visualize results."
 
 Visualize the mean and standard deviation of one-mimatch variants
 
@@ -44,4 +64,6 @@ Visualize the mean and standard deviation of one-mimatch variants
 makeLoessPlot(outputDir,clusterProps)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<p>
+ <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+</p>
