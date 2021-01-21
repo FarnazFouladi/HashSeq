@@ -1,0 +1,48 @@
+Jan 18, 2021 2:50:17 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC3.assembled.fastq.gz has 140309 sequences
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC2.assembled.fastq.gz has 113802 sequences
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC1.assembled.fastq.gz has 128250 sequences
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC3.txt are 20417
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC3.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC2.txt are 17211
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC2.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC1.txt are 20741
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC1.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:18 PM utils.MyLogger log
+INFO: Total abundance of all sequences after removing singletons:323992
+Jan 18, 2021 2:50:20 PM utils.MyLogger log
+INFO: Number of total children of cluster: 4164
+Jan 18, 2021 2:50:20 PM utils.MyLogger log
+INFO: Number of total parents of cluster: 2002
+Jan 18, 2021 2:50:20 PM utils.MyLogger log
+INFO: Number of total sequences with no mismatch: 1479
+Jan 18, 2021 2:50:20 PM utils.MyLogger log
+INFO: Pipeline ran successfully.
+Jan 18, 2021 2:50:21 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC3.assembled.fastq.gz has 140309 sequences
+Jan 18, 2021 2:50:21 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC2.assembled.fastq.gz has 113802 sequences
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: /Users/farnazfouladi/git/HashSeq/inst/extdata/example/sequences/Zymo-PC1.assembled.fastq.gz has 128250 sequences
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC3.txt are 20417
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC3.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC2.txt are 17211
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC2.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of singletons in ParsedZymo-PC1.txt are 20741
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Number of sequence variants with N in ParsedZymo-PC1.txt is 0 and their total abundances are 0
+Jan 18, 2021 2:50:22 PM utils.MyLogger log
+INFO: Pipeline ran successfully.
