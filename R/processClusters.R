@@ -12,7 +12,7 @@
 processCluster <- function(inputDir,outputDir,countTable=FALSE,mem)
 {
   # initialize Java Virtual Machine (JVM)
-  rJava::.jinit()
+  #rJava::.jinit()
 
   inputParams <- paste('-inputdirectory',inputDir,
                        '-outputdirectory',outputDir,
