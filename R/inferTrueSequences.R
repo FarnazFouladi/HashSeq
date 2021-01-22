@@ -4,14 +4,13 @@
 #'
 #' @param inputDir String
 #' @param outputDir String
-#' @param mem Java virtual machine memory
 #' @param abundanceThreshold threshold to remove low abundance sequences
 #'
 #' @return TODO:  determine what result to return
 #' @export
 #'
 #'
-inferTrueSequences <- function(inputDir,outputDir,mem,abundanceThreshold=1000)
+inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
 {
   print("***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************")
   printDim <- function(df, name)
@@ -21,7 +20,7 @@ inferTrueSequences <- function(inputDir,outputDir,mem,abundanceThreshold=1000)
     print(paste0("number of columns: ", ncol(df)))
     cat('\n')
   }
-  options(java.parameters = mem)
+  #options(java.parameters = mem)
   processCluster(inputDir,outputDir)
 
   cluster <- loadCluster(outputDir)
