@@ -6,8 +6,12 @@ Authors@R:
            family = "Fouladi",
            role = c("aut", "cre"),
            email = "farnaz.fouladi@gmail.com")
-Description: This package used normal distribution based inference test to detect 
-    true sequences from sequence errors.
+   person(given = "Jack",
+   family = "Young",
+   role = c("aut", "cre"),
+   email = "jyoun144@uncc.edu")
+Description: This package uses normal distribution based inference test to detect 
+    true sequences from sequence errors in 16S rRNA gene datasets.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -19,3 +23,6 @@ Imports:
     seqinr,
     scattermore,
     Hmisc
+Suggests: 
+    testthat (>= 2.0.0)
+Config/testthat/edition: 2
