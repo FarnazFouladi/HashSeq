@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 
 HashSeq has been developed to infer true biological 16S rRNA sequence variants from sequence errors generated from an Illumina sequecing instrument.HashSeq utilized a very fast HashMap-based approach to cluster sequence variants with one nucleotide difference. It further uses the normal distribution combined with loess regression to estimate background error rates as a function of sequencing depth for individual clusters. This estimated error rate is used to infer true sequences from the background error.
 
+Note: This package requires Java.
+
+
 ## Installation
 
 Install from github with:

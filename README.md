@@ -16,6 +16,8 @@ background error rates as a function of sequencing depth for individual
 clusters. This estimated error rate is used to infer true sequences from
 the background error.
 
+Note: This package requires Java.
+
 ## Installation
 
 Install from github with:
@@ -78,7 +80,7 @@ assignment and other down-stream analyses.
 inferTrueSequences(inputDir,outputDir,threshold)
 #> [1] "***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************"
 #> [1] "Class Path: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rJava/java"                                                       
-#> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpFaboym/temp_libpathafcf27a625cd/HashSeq/extdata/SequenceVariant.jar"
+#> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpCPf92c/temp_libpathf67c62aa3c26/HashSeq/extdata/SequenceVariant.jar"
 #> [1] "*****Dimensions of Cluster Table*****"
 #> [1] "number of rows: 5643"
 #> [1] "number of columns: 10"
@@ -96,7 +98,7 @@ inferTrueSequences(inputDir,outputDir,threshold)
 #> [1] "number of columns: 12"
 #> 
 #> [1] "Class Path: /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rJava/java"                                                       
-#> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpFaboym/temp_libpathafcf27a625cd/HashSeq/extdata/SequenceVariant.jar"
+#> [2] "Class Path: /private/var/folders/xy/_t9k7cp17rlf0j7xk3l006zh0000gn/T/RtmpCPf92c/temp_libpathf67c62aa3c26/HashSeq/extdata/SequenceVariant.jar"
 #> [1] "******INFERENCE PROCESSING IS COMPLETE******"
 #> [1] "TODO:  Add text that informs the user about which methods can be invoked to visualize results."
 ```
