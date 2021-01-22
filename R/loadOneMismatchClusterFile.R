@@ -6,7 +6,7 @@
 #'
 loadOneMismatchClusterFile <- function(outputDir)
 {
-  readIntervals <- c(rep(1, 360), -1)
+  readIntervals <- c(rep(60, 360), -1)
   result <- NULL
   targetFileName <- 'OneMismatchCluster.txt'
   spacer <- '********'
