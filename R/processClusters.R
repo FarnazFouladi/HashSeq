@@ -10,10 +10,10 @@
 #' @return writes a text file named as OneMimatchCluster.txt
 #' @noRd
 #'
-processCluster <- function(inputDir,outputDir,countTable=FALSE,mem="-Xmx512m")
+processCluster <- function(inputDir,outputDir,countTable=FALSE)
 {
   # initialize Java Virtual Machine (JVM)
-  rJava::.jinit(parameters=mem)
+  rJava::.jinit()
 
   inputParams <- paste('-inputdirectory',inputDir,
                        '-outputdirectory',outputDir,
