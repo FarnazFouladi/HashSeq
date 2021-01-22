@@ -1,6 +1,6 @@
 .onLoad <- function(libname, pkgname) {
   rJava::.jpackage(pkgname, lib.loc=libname)
-  op <- options(java.parameters = "-Xmx3g")
+  op <- options(java.parameters = "-Xmx5g")
   op.devtools <- list(
     devtools.path = "~/R-dev",
     devtools.install.args = "",
