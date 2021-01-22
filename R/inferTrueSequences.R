@@ -4,13 +4,14 @@
 #'
 #' @param inputDir String
 #' @param outputDir String
+#' @param mem Java virtual machine memory
 #' @param abundanceThreshold threshold to remove low abundance sequences
 #'
 #' @return TODO:  determine what result to return
 #' @export
 #'
 #'
-inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
+inferTrueSequences <- function(inputDir,outputDir,mem,abundanceThreshold=1000)
 {
   print("***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************")
   printDim <- function(df, name)
@@ -20,7 +21,7 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
     print(paste0("number of columns: ", ncol(df)))
     cat('\n')
   }
-  processCluster(inputDir,outputDir)
+  processCluster(inputDir,outputDir,mem)
 
   cluster <- loadCluster(outputDir)
   printDim(cluster, "Cluster Table")
@@ -36,7 +37,7 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
 
   writeFastaSeq(significantChildren,dfAbundantParents,outputDir)
 
-  processCluster(inputDir,outputDir,countTable = TRUE)
+  processCluster(inputDir,outputDir,countTable = TRUE,mem)
 
   print("******INFERENCE PROCESSING IS COMPLETE******")
   print("TODO:  Add text that informs the user about which methods can be invoked to visualize results.")

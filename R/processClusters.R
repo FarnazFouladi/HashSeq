@@ -5,14 +5,15 @@
 #' @param inputDir String
 #' @param outputDir String
 #' @param countTable Boolean
+#' @param mem Java virtual machine memory
 #'
 #' @return writes a text file named as OneMimatchCluster.txt
 #' @noRd
 #'
-processCluster <- function(inputDir,outputDir,countTable=FALSE)
+processCluster <- function(inputDir,outputDir,countTable=FALSE,mem="-Xmx512m")
 {
   # initialize Java Virtual Machine (JVM)
-  rJava::.jinit()
+  rJava::.jinit(parameters=mem)
 
   inputParams <- paste('-inputdirectory',inputDir,
                        '-outputdirectory',outputDir,

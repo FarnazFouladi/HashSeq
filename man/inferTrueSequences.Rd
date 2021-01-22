@@ -4,12 +4,14 @@
 \alias{inferTrueSequences}
 \title{Infer true amplicon sequence variants}
 \usage{
-inferTrueSequences(inputDir, outputDir, abundanceThreshold = 1000)
+inferTrueSequences(inputDir, outputDir, mem, abundanceThreshold = 1000)
 }
 \arguments{
 \item{inputDir}{String}
 
 \item{outputDir}{String}
+
+\item{mem}{Java virtual machine memory}
 
 \item{abundanceThreshold}{threshold to remove low abundance sequences}
 }
