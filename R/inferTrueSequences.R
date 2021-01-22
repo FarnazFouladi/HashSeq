@@ -21,7 +21,8 @@ inferTrueSequences <- function(inputDir,outputDir,mem,abundanceThreshold=1000)
     print(paste0("number of columns: ", ncol(df)))
     cat('\n')
   }
-  processCluster(inputDir,outputDir,mem)
+  options(java.parameters = mem)
+  processCluster(inputDir,outputDir)
 
   cluster <- loadCluster(outputDir)
   printDim(cluster, "Cluster Table")
