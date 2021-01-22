@@ -26,7 +26,7 @@ processCluster <- function(inputDir,outputDir,countTable=FALSE,mem)
   #rJava::.jaddClassPath(file.path(jarDir, jarName))
 
   # Display class path
-  print(paste0('Class Path: ', rJava::.jclassPath()))
+  #print(paste0('Class Path: ', rJava::.jclassPath()))
 
   # Invoke static sequenceVariant.RunPipelineRefactor.main method
   rJava::.jcall("sequenceVariant/RunPipelineRefactor", returnSig = "V", "main", inputArray)
