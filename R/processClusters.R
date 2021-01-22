@@ -19,11 +19,11 @@ processCluster <- function(inputDir,outputDir,countTable=FALSE,mem)
                        '-finaloutput',countTable)
 
   inputArray <- rJava::.jarray(strsplit(inputParams, ' ')[[1]])
-  jarDir <- system.file('extdata',package = 'HashSeq')
-  jarName <- 'SequenceVariant.jar'
+  #jarDir <- system.file('extdata',package = 'HashSeq')
+  #jarName <- 'SequenceVariant.jar'
 
   # Add JAR file to class path
-  rJava::.jaddClassPath(file.path(jarDir, jarName))
+  #rJava::.jaddClassPath(file.path(jarDir, jarName))
 
   # Display class path
   print(paste0('Class Path: ', rJava::.jclassPath()))
