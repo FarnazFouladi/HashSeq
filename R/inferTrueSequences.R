@@ -37,7 +37,7 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
 
   writeFastaSeq(significantChildren,dfAbundantParents,outputDir)
 
-  processCluster(inputDir,outputDir,countTable = TRUE,mem)
+  processCluster(inputDir,outputDir,countTable = TRUE)
 
   print("******INFERENCE PROCESSING IS COMPLETE******")
   print("TODO:  Add text that informs the user about which methods can be invoked to visualize results.")
