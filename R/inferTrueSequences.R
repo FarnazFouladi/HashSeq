@@ -1,12 +1,25 @@
-#' Infer true amplicon sequence variants
+#' Infer true sequence variants from sequence errors
 #'
-#'Invokes algorithm to infer true amplicon sequence variants.
+#'This function works on 16S rRNA gene datasets generated from Illumina.
+#'It infers true sequence variants based on the normal distribution and smooth
+#'regression of the background noise.
 #'
-#' @param inputDir String
-#' @param outputDir String
-#' @param abundanceThreshold threshold to remove low abundance sequences
+#' @param inputDir Directory which contains fastq files
+#' @param outputDir Directory which the outputs are save (This directory does not have exist)
+#' @param abundanceThreshold An abundance threshold to remove low-abundance sequences Default = 1000.
 #'
-#' @return TODO:  determine what result to return
+#' @return writes the following files:
+#' 1. OneMismatchCluster.txt: This file includes parents and one-mismatch children of all clusters.
+#' 2. ChildrePpoperties.txt: This file includes mean and standrad deviation of children abundances
+#'    for each cluster. This file can be used in "makeLoessPlot" to visualized the relationship between
+#'    abundance of parents and mean and standard deviations of children abundances.
+#' 3. InferenceTestSignificantChildren.txt: This file includes one-mismatch children that were significant in
+#'    an inference test at FDR 5% and had an abundance above abundanceThreshold.
+#' 4. sequences.fata: This fasta file includes parent sequences with an abundance above abundance threshold and
+#'    one-mismatch children in "InferenceTestSignificantChildren.txt".
+#' 5. A count table with sequence variants in the columns and samples in the rows.
+#'
+#'
 #' @export
 #'
 #'
@@ -40,6 +53,5 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
   processCluster(inputDir,outputDir,countTable = TRUE)
 
   print("******INFERENCE PROCESSING IS COMPLETE******")
-  print("TODO:  Add text that informs the user about which methods can be invoked to visualize results.")
 
 }
