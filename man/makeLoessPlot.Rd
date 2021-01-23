@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeLoessPlot.R
 \name{makeLoessPlot}
 \alias{makeLoessPlot}
-\title{Plot showing the relationship between parent abundance and mean and standard deviation}
+\title{Plot showing the relationship between parent abundance and mean and standard deviation of one-mismatch children.}
 \usage{
 makeLoessPlot(outputDir, fileName = "childrenproperties.txt")
 }
@@ -15,5 +15,7 @@ makeLoessPlot(outputDir, fileName = "childrenproperties.txt")
 Figures
 }
 \description{
-Plot showing the relationship between parent abundance and mean and standard deviation
+This plot helps to choose an abundance threshold for the "inferTrueSequence.R" function.
+Based on this plot, a threshold at which the mean or standard deviation of one-mismatch children are
+not a smooth function of the parent abundance can be chosen for filtering the low abundant sequence variants.
 }

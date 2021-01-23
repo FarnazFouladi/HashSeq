@@ -1,4 +1,8 @@
-#' Plot showing the relationship between parent abundance and mean and standard deviation
+#' Plot showing the relationship between parent abundance and mean and standard deviation of one-mismatch children.
+#'
+#' This plot helps to choose an abundance threshold for the "inferTrueSequence.R" function.
+#' Based on this plot, a threshold at which the mean or standard deviation of one-mismatch children are
+#' not a smooth function of the parent abundance can be chosen for filtering the low abundant sequence variants.
 #'
 #' @param outputDir The directory where childrenproperties.txt has been saved
 #' @param fileName Default=childrenproperties.txt
