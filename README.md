@@ -107,7 +107,7 @@ inferTrueSequences(inputDir,outputDir,threshold)
 We can visualize the relationship between the mean and standard
 deviation of one-mismatch children and the abundances of their parents.
 This visualization helps us to set a filtering threshold at above which
-the LOESS regression is good fit for our data.
+the LOESS regression is a good fit for our data.
 
 ``` r
 #Add file name
