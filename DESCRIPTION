@@ -13,6 +13,7 @@ Authors@R:
 Description: This package uses normal distribution based inference test to detect 
     true sequences from sequence errors in 16S rRNA gene datasets.
 License: MIT + file LICENSE
+Dependent: R (>= 2.5.0), methods
 SystemRequirements: Java JDK 1.2 or higher (for JRI/REngine JDK 1.4 or higher), GNU make
 Encoding: UTF-8
 LazyData: true
