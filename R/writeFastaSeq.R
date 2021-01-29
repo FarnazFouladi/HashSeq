@@ -16,5 +16,5 @@ writeFastaSeq<-function(inferredseq,parents,outputDir)
   view_parent_sequence_exceed_threshold <- parents %>% filter(.data$parentName %in% parentNameSet$parentName)
   Sequences_combined<-c(inferredseq$ChildSeq,view_parent_sequence_exceed_threshold$parentSeq)
   Names_combined<-c(inferredseq$Parent.child,view_parent_sequence_exceed_threshold$parentName)
-  seqinr::write.fasta(as.list(Sequences_combined),Names_combined,file.path(outputDir,paste0("sequences.fasta")),nbchar=250)
+  seqinr::write.fasta(as.list(Sequences_combined),Names_combined,file.path(outputDir,paste0("sequences.fasta")),nbchar=nchar(Sequences_combined[1]))
 }
