@@ -1,20 +1,25 @@
 Package: HashSeq
-Title: Infers True Sequences
-Version: 0.0.0.9000
+Type: Package
+Title: Normal-based Inference of Amplicon Sequences
+Version: 1.0.0
 Authors@R: 
     person(given = "Farnaz",
            family = "Fouladi",
            role = c("aut", "cre"),
-           email = "farnaz.fouladi@gmail.com")
-    person(given = "Jack",
+           email = "ffouladi@uncc.edu")
+    person(given = "Jacqueline",
            family = "Young",
            role = c("aut", "cre"),
            email = "jyoun144@uncc.edu")
-Description: This package uses normal distribution based inference test to detect 
-    true sequences from sequence errors in 16S rRNA gene datasets.
+Description: The HashSeq package infers true biological 16S rRNA sequence variants 
+             from sequence errors generated from an Illumina sequencing instrument. 
+             HashSeq utilizes a very fast HashMap-based approach to cluster sequence 
+             variants with one nucleotide difference. It further uses the normal distribution 
+             combined with LOESS regression to estimate background error rates as 
+             a function of sequencing depth for individual clusters. The estimated error rates 
+             are used to infer true sequences from the background error.
 License: MIT + file LICENSE
-Dependent: R (>= 2.5.0), methods
-SystemRequirements: Java JDK 1.2 or higher (for JRI/REngine JDK 1.4 or higher), GNU make
+SystemRequirements: Java JDK 1.8 or higher
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
