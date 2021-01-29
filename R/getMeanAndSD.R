@@ -33,6 +33,6 @@ getMeanAndSD<-function(clusters,outputDir){
     predictedSd = predict(fitSD,log10(.data$parentAbundance)),
     mean.inference = ifelse(.data$predictedMean > .data$mean, .data$predictedMean, .data$mean),
     sd.inference = ifelse(.data$predictedSd > .data$sd, .data$predictedSd, .data$sd) )
-  write.table(df3,file.path(outputDir,paste0("childrenProperties.txt")),sep="\t",quote = FALSE)
+  write.table(df3,file.path(outputDir,paste0("childrenProperties.txt")),sep="\t",quote = FALSE,row.names = FALSE)
   return(df3)
 }
