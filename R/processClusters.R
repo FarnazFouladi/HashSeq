@@ -11,24 +11,12 @@
 #'
 processCluster <- function(inputDir,outputDir,countTable=FALSE,mem)
 {
-  # initialize Java Virtual Machine (JVM)
-  #rJava::.jinit()
-
   inputParams <- paste('-inputdirectory',inputDir,
                        '-outputdirectory',outputDir,
                        '-finaloutput',countTable)
 
   inputArray <- rJava::.jarray(strsplit(inputParams, ' ')[[1]])
-  #jarDir <- system.file('java',package = 'HashSeq')
-  #jarName <- 'SequenceVariant.jar'
-
-  # Add JAR file to class path
-  #rJava::.jaddClassPath(file.path(jarDir, jarName))
-
-  # Display class path
-  #print(paste0('Class Path: ', rJava::.jclassPath()))
 
   # Invoke static sequenceVariant.RunPipelineRefactor.main method
   rJava::.jcall("sequenceVariant/RunPipelineRefactor", returnSig = "V", "main", inputArray)
-
 }
