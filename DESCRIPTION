@@ -11,6 +11,10 @@ Authors@R:
            family = "Young",
            role = c("aut", "cre"),
            email = "jyoun144@uncc.edu")
+    person(given = "Anthony",
+           family = "Fodor",
+           role = c("aut", "cre"),
+           email = "afodor@uncc.edu")
 Description: The HashSeq package infers true biological 16S rRNA sequence variants 
              from sequence errors generated from an Illumina sequencing instrument. 
              HashSeq utilizes a very fast HashMap-based approach to cluster sequence 
