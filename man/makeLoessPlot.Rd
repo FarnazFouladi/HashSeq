@@ -4,7 +4,7 @@
 \alias{makeLoessPlot}
 \title{Plot showing the relationship between parent abundance and mean and standard deviation of one-mismatch children.}
 \usage{
-makeLoessPlot(outputDir, fileName = "childrenproperties.txt")
+makeLoessPlot(outputDir, fileName = "childrenProperties.txt")
 }
 \arguments{
 \item{outputDir}{The directory where childrenproperties.txt has been saved}
