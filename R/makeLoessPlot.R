@@ -11,8 +11,8 @@
 #' @export
 #' @import graphics
 #'
-makeLoessPlot<-function(outputDir, fileName="childrenproperties.txt"){
-  clusterProperties<-read.table(file.path(outputDir,"childrenProperties.txt"),sep="\t",header = TRUE)
+makeLoessPlot<-function(outputDir, fileName="childrenProperties.txt"){
+  clusterProperties<-read.table(file.path(outputDir,fileName),sep="\t",header = TRUE)
   par(mfrow=c(1,2))
   makeScatterPlot(clusterProperties,"mean")
   makeScatterPlot(clusterProperties,"sd")
