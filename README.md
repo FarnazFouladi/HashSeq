@@ -107,11 +107,12 @@ inferTrueSequences(inputDir,outputDir,threshold)
 We can visualize the relationship between the mean and standard
 deviation of one-mismatch children and the abundances of their parents.
 This visualization helps us to set a filtering threshold at above which
-the LOESS regression is a good fit for our data.
+the LOESS regression is a good fit for our data.“childrenProperties.txt”
+is one of the outputs from the previous step and includes mean and
+standard deviation of one-mismatch children.
 
 ``` r
-#Add file name
-makeLoessPlot(outputDir,clusterProps)
+makeLoessPlot(outputDir,fileName = "childrenProperties.txt")
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
