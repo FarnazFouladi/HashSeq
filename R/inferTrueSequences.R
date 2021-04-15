@@ -7,7 +7,7 @@
 #' @param inputDir Directory which contains fastq files
 #' @param outputDir Directory which the outputs are save (This directory does not have exist)
 #' @param abundanceThreshold An abundance threshold to remove low-abundance sequences Default = 1000.
-#' @param fdr False discovery rate threshold Default = 0.05
+#' @param fdr False discovery rate threshold Default = 0.05.
 #'
 #' @return writes the following files:
 #' 1. OneMismatchCluster.txt: This file includes parents and one-mismatch children of all clusters.

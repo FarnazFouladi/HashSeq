@@ -13,7 +13,7 @@ inferTrueSequences(inputDir, outputDir, abundanceThreshold = 1000, fdr = 0.05)
 
 \item{abundanceThreshold}{An abundance threshold to remove low-abundance sequences Default = 1000.}
 
-\item{fdr}{False discovery rate threshold Default = 0.05}
+\item{fdr}{False discovery rate threshold Default = 0.05.}
 }
 \value{
 writes the following files:
