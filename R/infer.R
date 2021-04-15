@@ -4,6 +4,7 @@
 #' @param cluster a cluster table
 #' @param  abundanceThreshold threshold for removing low abundant sequences
 #' @param outputDir output directory
+#' @param fdr False discovery rate threshold Default = 0.05
 #'
 #' @return a table with significant children
 #' @import dplyr
@@ -11,7 +12,7 @@
 #' @importFrom utils write.table
 #' @noRd
 #'
-infer<-function(clusterProperties,cluster,abundanceThreshold,outputDir){
+infer<-function(clusterProperties,cluster,abundanceThreshold,fdr,outputDir){
 
   view_inference_test <- left_join(clusterProperties, cluster, by=c("parentName" = "Parent")) %>%
     arrange(.data$parentName, .data$ChildAbundance) %>%
@@ -29,9 +30,7 @@ infer<-function(clusterProperties,cluster,abundanceThreshold,outputDir){
            .data$pval)
   view_inference_test$pvalAdjusted <- p.adjust(view_inference_test$pval,method = "BH")
 
-  write.table(view_inference_test,file.path(outputDir,paste0("InferenceTest.txt")),sep="\t",quote = FALSE, row.names = FALSE)
-
-  view_inference_test_sig_children <-view_inference_test %>% filter(.data$pvalAdjusted < 0.050, .data$parentAbundance > abundanceThreshold)
+  view_inference_test_sig_children <-view_inference_test %>% filter(.data$pvalAdjusted <= fdr, .data$parentAbundance > abundanceThreshold)
 
   write.table(view_inference_test_sig_children,file.path(outputDir,paste0("InferenceTestSignificantChildren.txt")),sep="\t",quote = FALSE, row.names = FALSE)
 

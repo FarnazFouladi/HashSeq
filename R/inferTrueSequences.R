@@ -7,6 +7,7 @@
 #' @param inputDir Directory which contains fastq files
 #' @param outputDir Directory which the outputs are save (This directory does not have exist)
 #' @param abundanceThreshold An abundance threshold to remove low-abundance sequences Default = 1000.
+#' @param fdr False discovery rate threshold Default = 0.05
 #'
 #' @return writes the following files:
 #' 1. OneMismatchCluster.txt: This file includes parents and one-mismatch children of all clusters.
@@ -23,7 +24,7 @@
 #' @export
 #'
 #'
-inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
+inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000, fdr=0.05)
 {
   print("***************PLEASE WAIT.  PROCESSING INPUT SEQUENCES***************")
   printDim <- function(df, name)
@@ -45,7 +46,7 @@ inferTrueSequences <- function(inputDir,outputDir,abundanceThreshold=1000)
   childrenProperties <- getMeanAndSD(cluster,outputDir)
   printDim(childrenProperties, "Children Properties Table")
 
-  significantChildren <- infer(childrenProperties,cluster,abundanceThreshold,outputDir)
+  significantChildren <- infer(childrenProperties,cluster,abundanceThreshold,fdr,outputDir)
   printDim(significantChildren, "Significant Children Table")
 
   writeFastaSeq(significantChildren,dfAbundantParents,outputDir)
