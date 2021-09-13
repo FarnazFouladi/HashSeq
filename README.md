@@ -15,7 +15,8 @@ combined with LOESS regression to estimate background error rates as a
 function of sequencing depth for individual clusters. The estimated
 error rates are used to infer true sequences from the background error.
 
-Note: This package requires Java JDK 1.2 or higher.
+Note: This package requires Java JDK 1.2 or higher (JDK above 14.0.2 has
+been tested).
 
 ## Installation
 
